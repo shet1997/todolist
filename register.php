@@ -2,9 +2,10 @@
 <html>
 <head>
 	<title>register</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
 </head>
 <body>
-		<form>
+		<form method="post" action="registration.php" onsubmit="return validation();">
 			<div class="form-group">
 				<label for>Name</label>
 				<input class="form-control" type="text" name="name" id="name">
@@ -19,7 +20,7 @@
 			</div>
 			<div class="form-group">
 				<label for>Mobile</label>
-				<input class="form-control" type="number" name="mobile">
+				<input class="form-control" type="number" name="mobile" id="mobile">
 			</div>
 			<div class="form-group">
 				<label for>Gender</label>
