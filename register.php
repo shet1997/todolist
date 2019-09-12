@@ -2,17 +2,21 @@
 <html>
 <head>
 	<title>register</title>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.css">
+	<script src="assets/js/jquery.min.js"></script>
 </head>
 <body>
-		<form method="post" action="registration.php" onsubmit="return validation();">
+		<div class="container">
+			<div class="row">
+			<div class="col-8 offset-2">
+		<form method="post" action="registration.php" onsubmit="return validation();" class="pt-5">
 			<div class="form-group">
 				<label for>Name</label>
 				<input class="form-control" type="text" name="name" id="name">
 			</div>
 			<div class="form-group">
 				<label for>Email</label>
-				<input class="form-control" type="email" name="email" id="email">
+		<input class="form-control" type="email" name="email" id="email" onfocusout="checkEmail(this);">
 			</div> 
 			<div class="form-group">
 				<label for>Password</label>
@@ -25,9 +29,12 @@
 			<div class="form-group">
 				<label for>Gender</label>
 				<input type="radio" name="gender" value="male">
-				<input type="radio" name="gender" value="females">
+				<input type="radio" name="gender" value="female">
 			</div>
 			<button type="submit" value="submit" id="submit" class="btn-success">submit</button>
 		</form>
+		</div>
+		</div>
+		</div>
 </body>
 </html>

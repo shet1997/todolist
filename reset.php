@@ -8,7 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 		header("location: forgotpwd.php")
 	}
 	else{
-		echo "email does not exists";
+		echo "email does noxt exists";
 	}
 
 }
