@@ -5,18 +5,21 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		$emailid = $_POST["email"];
 		$name = $_POST["name"];
-		$password = $_POST["pasword"];
+		$password = $_POST["password"];
 		$password = md5($password);
 		$mobile = $_POST["mobile"];
-		$gender = $_POST["gender"];
+		if(isset($_POST["gender"])){
+			$gender = $_POST["gender"];
+		}
+		
 	}
 
 
-	include "data.php";
+	include "connection.php";
 
 
 	$select = "select email from userdata where email='$emailid'";
-	$selectex = mysqli_query($conn,$selectex);
+	$selectex = mysqli_query($conn,$select);
 
 
 	if(mysqli_num_rows($selectex) == 1) {

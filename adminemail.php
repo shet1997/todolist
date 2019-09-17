@@ -15,10 +15,10 @@ $template1 = "<!DOCTYPE html>
 			<th>gender</th>
 		</tr>
 		<tr>
-			<td> '".$name."' </td>
-				<td>'".$emailid."'</td>
-				<td>'".$mobile."'</td>
-				<td>'".$gender."'</td>
+			<td> ".$name." </td>
+				<td>".$emailid."</td>
+				<td>".$mobile."</td>
+				<td>".$gender."</td>
 		</tr>
 	</table>
 </body>

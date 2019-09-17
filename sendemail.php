@@ -12,7 +12,7 @@ function sendEmail($email, $template){
 	
 $email->setFrom("prajwalashet@gmail.com", "Example User");
 $email->setSubject("Registration successfully done");
-$email->addTo("$emailid", "Example User");
+$email->addTo($email-, "Example User");
 $email->addContent(
     "text/html", $template
 );
