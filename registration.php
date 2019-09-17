@@ -1,6 +1,9 @@
 <?php 
+	include "sendemail.php";
+	
+
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
-		$email = $_POST["email"];
+		$emailid = $_POST["email"];
 		$name = $_POST["name"];
 		$password = $_POST["pasword"];
 		$password = md5($password);
@@ -12,15 +15,24 @@
 	include "data.php";
 
 
-	$select = "select email='$email' from task";
+	$select = "select email from userdata where email='$emailid'";
 	$selectex = mysqli_query($conn,$selectex);
+
 
 	if(mysqli_num_rows($selectex) == 1) {
 
 			echo "email should be unique";
 		}else{
-			$insert = "insert into datastore(name,email,password,mobile,gender) values('$name','$email','$password','$mobile','$gender')";
-				 $insertex = mysqli_query($conn,$insert);
+			$insert = "insert into userdata(name,email,password,mobile,gender) values('$name','$emailid','$password','$mobile','$gender')";
+				  if(mysqli_query($conn,$insert)) {
+				  	echo "inserted successfully";
+				  }
+				 include "useremail.php";
+	include "adminemail.php";
+				 sendEmail("ankitsawardekar0705@gmail.com",$template1);
+				 sendEmail($emailid,$template2);
+				 
+
 
 		}
 ?>

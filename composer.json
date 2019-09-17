@@ -1,0 +1,12 @@
+{
+    "name": "admin/todolist",
+    "authors": [
+        {
+            "name": "shet1997",
+            "email": "shetshet281997@gmail.com"
+        }
+    ],
+    "require": {
+        "sendgrid/sendgrid": "^7.3"
+    }
+}

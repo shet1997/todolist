@@ -3,7 +3,6 @@
 <head>
 	<title>register</title>
 	<link rel="stylesheet" href="assets/css/bootstrap.css">
-	<script src="assets/js/jquery.min.js"></script>
 </head>
 <body>
 		<div class="container">
@@ -38,3 +37,7 @@
 		</div>
 </body>
 </html>
+
+<?php
+include "script.php"; 
+?>

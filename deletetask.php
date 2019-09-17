@@ -9,7 +9,7 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 	$id = $_GET["id"]
 } 
 
-include "data.php";
+include "connection.php";
 
 $delete = "delete * from task where id='$id'";
 if(mysqli_query($conn,$delete)) {
