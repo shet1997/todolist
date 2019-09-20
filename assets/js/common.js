@@ -11,7 +11,8 @@ function checkEmail(dis) {
 	dataType: 'json',
 	success: function(data) {
 	if(data.message == 'failure') {
-		cosole.log('already exists')
+		cosole.log('already exists');
+		$("#emailerr").text("email already exists");
 }
 }
 });

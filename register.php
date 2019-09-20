@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>register</title>
-	<link rel="stylesheet" href="assets/css/bootstrap.css">
-</head>
+<?php include "header.php"; ?>
 <body>
 		<div class="container">
 			<div class="row">
@@ -27,8 +24,8 @@
 			</div>
 			<div class="form-group">
 				<label for>Gender</label>
-				<input type="radio" name="gender" value="male">
-				<input type="radio" name="gender" value="female">
+				<input type="radio" name="gender" value="male">male
+				<input type="radio" name="gender" value="female">female
 			</div>
 			<button type="submit" value="submit" id="submit" class="btn-success">submit</button>
 		</form>

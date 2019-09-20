@@ -1,9 +1,6 @@
 <?php 
 session_start();
 
-// if(empty($_SESSION)){
-// 	header("location: login.php")
-// }
 
 $email = $_SESSION['email'];
 
@@ -14,7 +11,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
 }
 
-include "data.php";
+include "connection.php";
 
 $update = "update userdata set password='$newpassword' where email='$email' ";
 

@@ -31,8 +31,8 @@
 				  	echo "inserted successfully";
 				  }
 				 include "useremail.php";
-	include "adminemail.php";
-				 sendEmail("ankitsawardekar0705@gmail.com",$template1);
+				 include "adminemail.php";
+				 sendEmail("prajwalashet@gmail.com",$template1);
 				 sendEmail($emailid,$template2);
 				 
 

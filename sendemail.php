@@ -1,5 +1,5 @@
 <?php
-function sendEmail($email, $template){
+function sendEmail($emailid, $template){
 	require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // Comment out the above line if not using Composer
 // require("<PATH TO>/sendgrid-php.php");
@@ -12,13 +12,13 @@ function sendEmail($email, $template){
 	
 $email->setFrom("prajwalashet@gmail.com", "Example User");
 $email->setSubject("Registration successfully done");
-$email->addTo($email-, "Example User");
+$email->addTo($emailid, "Example User");
 $email->addContent(
     "text/html", $template
 );
 // $email->addContent("text/plain", "and easy to do anywhere, even with PHP");
 
-$sendgrid = new \SendGrid(getenv(''));
+$sendgrid = new \SendGrid('');
 try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
