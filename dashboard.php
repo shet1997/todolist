@@ -1,17 +1,15 @@
 <?php 
 	session_start();
-	if(empty($_SESSION["email"])) {
-		header("location: login.php");
-	}
+	// if(empty($_SESSION)) {
+	// 	header("location: login.php");
+	// }
 ?>
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-</head>
+<?php include "commoncomponents/header.php"; ?>
 <body>
+	<?php include "navbar.php"; ?>
 	<form method="post" action="<?php echo $_SERVER['PHP_SELF']."?id=". $row['id'] ?>">
 		
 	</form>

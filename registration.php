@@ -28,7 +28,9 @@
 		}else{
 			$insert = "insert into userdata(name,email,password,mobile,gender) values('$name','$emailid','$password','$mobile','$gender')";
 				  if(mysqli_query($conn,$insert)) {
-				  	echo "inserted successfully";
+				  	// echo "inserted successfully";
+				  	header("location: dashboard.php");
+				  	exit();
 				  }
 				 include "useremail.php";
 				 include "adminemail.php";

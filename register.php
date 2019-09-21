@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<?php include "header.php"; ?>
+<?php include "commoncomponents/header.php"; ?>
 <body>
 		<div class="container">
 			<div class="row">

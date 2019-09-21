@@ -1,17 +1,37 @@
 <?php  
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-	$name = $_POST["taskname"];
-	$desc = $_POST["taskdesc"];
-	$stime = $_POST["stime"];
-	$etime = $_POST["etime"];
-}
+session_start();
 
 include "connection.php";
 
-$taskinsert = "insert into task(name,description,stime,etime) values($name,$desc,$stime,$etime)";
+$email = $_SESSION['email'];
 
-$taskexc = mysqli_query($conn,$taskinsert);
+$uidquery = "select id from userdata where email='$email'";
+
+$uid = mysqli_query($conn,$uid);
+
+print_r($uid);
+die();
+
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+	$name = $_POST["taskname"];
+	//print_r($name);
+	$desc = $_POST["taskdesc"];
+	//print_r($desc);
+	$stime = $_POST["starttime"];
+	print_r($stime);
+	$etime = $_POST["endtime"];
+	print_r($etime);
+}
+
+
+
+$taskinsert = "INSERT INTO task(name,description,stime,etime,uid) VALUES('$name','$desc','$stime','$etime','$uid')";
+
+if(mysqli_query($conn,$taskinsert)) {
+	echo "inserted successfully";
+}
 
 
 ?>
