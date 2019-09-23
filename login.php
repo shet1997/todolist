@@ -1,15 +1,11 @@
-
-
-
-
 <!DOCTYPE html>
 <html>
-<?php include "commoncomponents/header.php"; ?>
+<?php include "common-components/header.php"; ?>
 <body>
 <div class="container">
 	<div class="row">
 		<div class="col-4 offset-4 ">
-		<form method="post" action="loginvalidation.php" class="mt-5">
+		<form method="post" action="controller/loginvalidation.php" class="mt-5">
 			<div class="form-group">
 				<label for>Email</label>
 				<input class="form-control" type="email" name="email" onfocusout="checkEmail();">

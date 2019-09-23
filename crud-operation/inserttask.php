@@ -2,16 +2,16 @@
 
 session_start();
 
-include "connection.php";
+include "../common-components/connection.php";
 
 $email = $_SESSION['email'];
 
-$uidquery = "select id from userdata where email='$email'";
+$uidquery = "select uid from userdata where email='$email'";
 
 $uid = mysqli_query($conn,$uid);
 
-print_r($uid);
-die();
+// print_r($uid);
+// die();
 
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {

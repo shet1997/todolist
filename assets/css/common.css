@@ -3,9 +3,14 @@
 			padding: 200px;
 			text-align: center;
 		}
+		
 		.nav_sty ul li a {
 			font-size: 23px;
 			color: white;
 
+		}
+
+		table tr th td {
+			border: 1px solid black;
 		}
 		

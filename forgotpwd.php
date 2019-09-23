@@ -23,9 +23,7 @@ $updateex = mysqli_query($conn,$updateex);
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-</head>
+<?php include "common-components/header.php"; ?>
 <body>
 	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
 		<div class="form-group">
@@ -40,4 +38,7 @@ $updateex = mysqli_query($conn,$updateex);
 		<button type="submit"></button>
 	</form>
 </body>
+<?php include "common-components/script.php";
+      include "assets/js/common.js";
+?>
 </html>

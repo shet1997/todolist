@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
-<?php include "commoncomponents/header.php"; ?>
+<?php include "common-components/header.php"; ?>
 <body>
 		<div class="container">
 			<div class="row">
 			<div class="col-8 offset-2">
-		<form method="post" action="registration.php" onsubmit="return validation();" class="pt-5">
+		<form method="post" action="controller/registration.php" onsubmit="return validation();" class="pt-5">
 			<div class="form-group">
 				<label for>Name</label>
 				<input class="form-control" type="text" name="name" id="name">
@@ -36,5 +36,5 @@
 </html>
 
 <?php
-include "script.php"; 
+include "common-components/script.php"; 
 ?>

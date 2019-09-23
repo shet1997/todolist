@@ -11,8 +11,9 @@ if($_SERVER["REQUEST_METHOD"] == "GET") {
 
 include "connection.php";
 
-$delete = "delete * from task where id='$id'";
-if(mysqli_query($conn,$delete)) {
+// $delete = "delete * from task where id='$id'";
+$deletestask = "update task set status='1' where id = '$id'";
+if(mysqli_query($conn,$deletestask)) {
 	echo json_encode(array(
 		"message" => "success";
 	));

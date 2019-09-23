@@ -6,8 +6,8 @@ include "connection.php";
 	$exec = mysqli_query($conn,$sql);
 	if(mysqli_num_rows($exec) == 1) {
 		// header("location: forgotpwd.php")
-		include "sendemail.php";
-		include "resetemail.php";
+		include "email/sendemail.php";
+		include "email/resetemail.php";
 		sendEmail($emailid,$template3);
 		$message = "email link has been sent";
 	}
@@ -21,16 +21,9 @@ include "connection.php";
 
 <!DOCTYPE html>
 <html>
-<head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
-	<style type="text/css">
-		.pad_mar {
-			padding: 200px;
-			text-align: center;
-		}
-	</style>
-</head>
+<?php include "commoncomponents/header.php";
+	  include "assets/css/common.css";
+?>
 <body>
 	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="pad_mar ">
 		<div class="form-group">
