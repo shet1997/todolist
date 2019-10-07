@@ -1,6 +1,7 @@
 
 $(document).ready(function() {
-	function checkEmail(dis) {
+
+	function checkEmail(dis,email) {
 		var email = $(this).val();
 		$.ajax({
 			method: 'post',
@@ -21,11 +22,12 @@ $(document).ready(function() {
 		var passwordnew = $("#npwd").val();
 		var passwordconf = $("#cpwd").val();
 		if(passwordnew != passwordconf) {
-			$("#pwderr").after("<span class="error">passwords are not matching</span>")
+			$("#password").after("<span class='error'>passwords are not matching</span>");
+			return false;
 		}
 
 	}
-})
+// })
 
 	
 
@@ -34,7 +36,7 @@ $(document).ready(function() {
 function deletetask(dis,id) {
 	$.ajax({
 		method:'post',
-		url: 'crud-operation/deletetask.php';
+		url: 'crud-operation/deletetask.php',
 		data: {id:id},
 		dataType: json,
 		success: function(data) {
@@ -47,6 +49,8 @@ function deletetask(dis,id) {
 		}
 	})
 }
+
+});
 
 
 

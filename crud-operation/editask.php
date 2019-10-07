@@ -1,4 +1,10 @@
  <?php 
+ 
+ session_start();
+
+	 // if(empty($_SESSION["email"]) {
+	 // 	header("location: login.php");
+	 // });
 
 include "../common-components/connection.php";
 
@@ -41,7 +47,7 @@ die();
  				<td><?php echo($row['']); ?></td>
  				<td><?php echo($row['']); ?></td>
  				<td><?php echo($row['']) ; ?></td>
- 				<td><a href="crud-operation/updatetask.php?id=<?php echo($row['id']); ?>"><i class="fa fa-pencil pl-3" aria-hidden="true"></i></a>
+ 				<td><a href="updatetask.php?id=<?php echo($row['id']); ?>"><i class="fa fa-pencil pl-3" aria-hidden="true"></i></a>
  					<a onclick="deletetask(<?php echo($row['id']); ?>)"><i class="fa fa-trash pl-5" aria-hidden="true"></i></a>
  				</td>
  			</tr>

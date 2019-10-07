@@ -5,18 +5,20 @@
 		<div class="container">
 			<div class="row">
 			<div class="col-8 offset-2">
-		<form method="post" action="controller/registration.php" onsubmit="return validation();" class="pt-5">
+		<form method="post" action="controller/registration.php" onsubmit="return validation()" class="pt-5">
 			<div class="form-group">
 				<label for>Name</label>
 				<input class="form-control" type="text" name="name" id="name">
 			</div>
 			<div class="form-group">
 				<label for>Email</label>
-		<input class="form-control" type="email" name="email" id="email" onfocusout="checkEmail(this);">
+		<input class="form-control" type="email" name="email" id="email" 
+		focusout="return checkEmail(this)">
 			</div> 
+			<div id="emailerr"></div>
 			<div class="form-group">
 				<label for>Password</label>
-				<input class="form-control" type="password" name="password" id="password">
+				<input class="form-control" type="password" name="password" id="password" focusout=" return checkletter(this)">
 			</div>
 			<div class="form-group">
 				<label for>Mobile</label>

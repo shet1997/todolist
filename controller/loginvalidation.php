@@ -16,7 +16,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	// die();
 	}
 
-include "connection.php";	
+include "../common-components/connection.php";	
 
 $select = "SELECT email,password from userdata WHERE  email = '$emailid' AND password = '$pwd'";
 
@@ -36,9 +36,12 @@ $rownumber = mysqli_num_rows($selectex);
 
 
 if(mysqli_num_rows($selectex) == 1) {
-	$email = $_SESSION["email"];
-	$_SESSION["logged"] = true;
-	header("location: dashboard.php");
+	$row = mysqli_fetch_assoc($selectex);
+
+	 $_SESSION["email"] = $row["email"];
+	 $_SESSION["logged"] = true;
+
+	header("location: ../dashboard.php");
 	exit();
 }
 else{
