@@ -13,12 +13,13 @@
 			<div class="form-group">
 				<label for>Email</label>
 		<input class="form-control" type="email" name="email" id="email" 
-		focusout="return checkEmail(this)">
+		focusout="return checkEmail(this,email)">
 			</div> 
 			<div id="emailerr"></div>
 			<div class="form-group">
 				<label for>Password</label>
-				<input class="form-control" type="password" name="password" id="password" focusout=" return checkletter(this)">
+				<input class="form-control" type="password" name="password" id="password">
+				<!-- <div id="passworderr"></div> -->
 			</div>
 			<div class="form-group">
 				<label for>Mobile</label>

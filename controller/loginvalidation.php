@@ -5,7 +5,8 @@
 // die();
 
 session_start();
-	
+
+include "../common-components/connection.php";		
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
 	$emailid = $_POST["email"];
@@ -15,8 +16,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 	// print_r($password);
 	// die();
 	}
-
-include "../common-components/connection.php";	
 
 $select = "SELECT email,password from userdata WHERE  email = '$emailid' AND password = '$pwd'";
 

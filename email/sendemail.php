@@ -1,5 +1,5 @@
 <?php
-function sendEmail($emailid, $template){
+function sendEmail($emailid, $template, $token){
 	require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // Comment out the above line if not using Composer 
 // require("<PATH TO>/sendgrid-php.php");
@@ -10,7 +10,7 @@ function sendEmail($emailid, $template){
 // https://github.com/sendgrid/sendgrid-php/releases
 	$email = new \SendGrid\Mail\Mail(); 
 	
-$email->setFrom("prajwalashet@gmail.com", "Example User");
+$email->setFrom("prajwalashet@gmail.com", "reset password");
 $email->setSubject("Registration successfully done");
 $email->addTo($emailid, "Example User");
 $email->addContent(

@@ -37,7 +37,7 @@
 
 			echo "email should be unique";
 	}else{
-		$insert = "insert into userdata(name,email,password,mobile,gender) values('name','$emails','$passwords','$mobile','$gender')";
+		$insert = "insert into userdata(name,email,password,mobile,gender) values('$name','$emails','$passwords','$mobile','$gender')";
 		// print_r($insert);
 		// die();
 			  if(mysqli_query($conn,$insert)) {

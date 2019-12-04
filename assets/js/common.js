@@ -30,8 +30,6 @@ $(document).ready(function() {
 	}
 // })
 
-	
-
 
 
 function deletetask(dis,id) {
@@ -63,17 +61,21 @@ function validation() {
 		$("#name").after("<span class='error'>Name must be minimum of 3 letters </span>");
 		return false
 
-		if{
+		if (true) {} {
 		var matchname = /^[a-zA-Z]$/;
 		var validatename = matchname.test(name);
 		if(!validatename) {
-			$("#name").after("<spanclass='error'>name is invalid</span>")
+			$("#name").after("<spanclass='error'>name is invalid</span>");
+			return false;
 		     }
 	      }
+	      return true;
 	}  
+
 	
 	if(email.length < 1) {
 		$("#email").after("<span class='error'>email must be entered</span>");
+		return false;
 	}
 
 	if(password.length < 8) {
@@ -88,6 +90,7 @@ function validation() {
               return false;
               }
           }
+          return true;
         }
 
 	if(mobile.length < 11) {

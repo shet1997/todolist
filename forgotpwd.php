@@ -1,44 +1,59 @@
 <?php 
-session_start();
+include "common-components/connection.php";
+
+	$a = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+	$token = str_shuffle($a);
+
+	// print_r($token);
+	// die();	
 
 
-$email = $_SESSION['email'];
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-
-	 $newpassword = $_POST["npwd"];
-	 $newpassword = md5($newpassword);
-
+if($_SERVER["REQUEST_METHOD"] == "GET") {
+	$message = $_GET["message"];
 }
 
-include "connection.php";
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+	$emailid = $_POST['email'];
+	$sql = "select email from userdata where email='$emailid'";
+	$exec = mysqli_query($conn,$sql); 
+	if(mysqli_num_rows($exec) == 1) {
+		// header("location: forgotpwd.php")
+		// echo "hello";
+		// die();	
+		include "email/sendemail.php";
+		include "email/resetemail.php";
+		sendEmail($emailid,$template3,$token);
 
-$update = "update userdata set password='$newpassword' where email='$email' ";
+		$token_expiry_insert = "insert into password_reovery(email,token,expiring_time) values('$emailid', '$token', date_add(NOW(), INTERVAL 10 MINUTE) )";
+		$token_expiry_insert_exe = mysqli_query($conn, $token_expiry_insert);
 
-$updateex = mysqli_query($conn,$updateex);
+		// print_r($token_expiry_insert_exe );
+		// die();
 
+		$message = "email link has been sent";
+	}
+	else{
+		echo "email does noxt exists";
+	}
+
+}
 ?>
-
 
 
 <!DOCTYPE html>
 <html>
-<?php include "common-components/header.php"; ?>
+<?php include "common-components/header.php";
+?>
 <body>
-	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
+	<form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" class="pad_mar ">
 		<div class="form-group">
-			<label>new password</label>
-			<input type="text" name="npwd" class="form-control" id="npwd">
+			<label>Email</label>
+			<input type="email" name="email" id="email" onfocusout="checkEmail(this); ">
+			<div>
+			<?php echo @$message ?>
+			</div>
 		</div>
-		<div>
-			<label>confirm password</label>
-			<input type="text" name="cpwd" class="form-control" id="cpwd" onkeyup="checkletters(this);">
-			<div id="pwderr"></div>
-		</div>
-		<button type="submit"></button>
+		<button type="submit" value="submit" class="btn-success">submit</button>
 	</form>
 </body>
-<?php include "common-components/script.php";
-      include "assets/js/common.js";
-?>
 </html>

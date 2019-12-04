@@ -7,7 +7,7 @@ $template3 = "<!DOCTYPE html>
 </head>
 <body>
 	<p>reset password link </p>
-	<a href='http://localhost/todolist/forgotpwd.php'>reset</a>
+	<a href='http://localhost/todolist/tokencheck.php?email=".$emailid."&token=".$token."'>reset</a>
 </body>
 </html>";
 

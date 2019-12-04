@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <?php include "common-components/header.php"; ?>
+
 <body>
 <div class="container">
 	<div class="row">
@@ -14,7 +15,7 @@
 				<label for>Password</label>
 				<input class="form-control" type="password" name="password">
 			</div>
-			<a href="resetpassword.php">forgot password</a>
+			<a href="forgotpwd.php">forgot password</a>
 			<button type="submit" value="submit" id="submit" class="btn-success pl-3 pr-3 ml-3 mr-3">submit</button>
 			<a href="register.php">signup</a>
 
