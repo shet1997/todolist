@@ -44,7 +44,7 @@ if(mysqli_num_rows($selectex) == 1) {
 	exit();
 }
 else{
-	header("location: register.php");
+	header("location: ../register.php");
 }
 
 ?>

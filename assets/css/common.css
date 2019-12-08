@@ -1,9 +1,4 @@
 
-		.pad_mar {
-			padding: 200px;
-			text-align: center;
-		}
-		
 		.nav_sty ul li a {
 			font-size: 23px;
 			color: white;
@@ -24,4 +19,76 @@
 		.error {
 			font-size: 15px;
 			color: red;
+		}
+
+		input[type=email] {
+
+			border-radius: 25px;
+  
+			}
+
+		input[type=text] {
+
+			border-radius: 25px;
+  
+			}
+
+		input[type=time] {
+
+			border-radius: 25px;
+  
+			}
+
+  		input[type=number] {
+
+			border-radius: 25px;
+  
+			}	
+
+
+		input[type=password] {
+
+			border-radius: 25px;
+  
+			}	
+		
+		.submit_btn {
+
+			width: 100px;
+			background-color: green;
+			border-radius: 25px;
+			font-size: 20px;
+			color: white;
+			border-color: green;
+		}
+
+		.submit_btn:hover {
+			background-color: white;
+			color: black;
+		}
+
+		.card_bdr {
+			border-radius: 30px;
+		}
+
+		.log_redircts {
+			display: inline-block;
+		}
+
+		.bac_image {
+		background-image: url(../../images/images4.jpg);
+		background-repeat: no-repeat;
+		height: 100vh;
+		width: 100vw;
+		background-size: cover;
+		}
+
+		body {
+			font-family: 'Noto Sans', sans-serif;
+			font-size: 15px;
+
+		}
+
+		.edit_table{
+			color: white;
 		}

@@ -2,6 +2,13 @@
 
 session_start();
 
+// print_r($_SESSION);
+// die();
+
+if(empty($_SESSION['email'])) {
+	header("location: ../login.php");
+}
+
 include "../common-components/connection.php";
 
 $email = $_SESSION["email"];
@@ -42,3 +49,5 @@ if(mysqli_query($conn,$taskinsert)) {
 
 
 ?>
+
+

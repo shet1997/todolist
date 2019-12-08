@@ -32,6 +32,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <html>
 <?php include "../common-components/header.php"; ?>
 <body>
+	<div class="bac_image">
+		<div class="container">
+			<div class="row">
+			<div class="col-4 offset-4">
+			<div class="card card_bdr mt-5">
 	<form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>" enctype="multipart/form-data">
 		<div class="form-group">
 			<label>file upload</label>
@@ -41,5 +46,11 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			<input type="submit" name="submit" class="form-control" value="submit">
 		</div>
 	</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
 </body>
 </html>

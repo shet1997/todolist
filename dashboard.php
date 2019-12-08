@@ -1,12 +1,12 @@
 <?php 
-	session_start();
+	// session_start();
 	
 
-	if(empty($_SESSION){
-		header("location: login.php");
-	});
+	// if(empty($_SESSION){
+	// 	header("location: login.php");
+	// });
 
-	$email = $_SESSION["email"];
+	// $email = $_SESSION["email"];
 
 
 ?>
