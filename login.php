@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(isset($_SESSION)) {
+	header("location: dashboard.php");
+}
+
+?>
 <!DOCTYPE html>
 <html>
 <?php include "common-components/header.php"; ?>

@@ -32,7 +32,7 @@ $taskex = mysqli_query($conn,$taskselect);
  		  include "../common-components/font-family.php";
  	 ?>
  <body>
- 	<div class="bac_image">
+ 	<div class="bac_image pt-5">
 		<div class="container">
  		<table class="table edit_table">
  			<tr>

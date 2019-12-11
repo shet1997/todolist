@@ -1,10 +1,7 @@
 <?php 
 
-
-// echo "hello";
-// die();
-
 session_start();
+
 
 include "../common-components/connection.php";		
 

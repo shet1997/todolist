@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
-<?php include "../common-components/header.php"; ?>
+<?php include "../common-components/header1.php";
+	  include "../common-components/navbar.php";
+ ?>
 <body>
+<div class="bac_image">	
 <div class="container">
   <div class="row">
 	<div class="col-4 offset-4">
@@ -25,13 +28,14 @@
 						<input type="time" name="endtime" id="endtime" class="form-control">
 					</div>
 					<div class="d-flex justify-content-center">
-					<button type="submit" class="submit_btn  pl-5 pr-5">Save</button>
+					<button type="submit" class="submit_btn">Save</button>
 					</div>
 	  </form>
 			</div>
 		</div>
     </div>
    </div>
+</div>
 </div>
 </body>
 </html>

@@ -12,8 +12,9 @@
 		.user_info {
 			border: 1px solid blue;
 			height: 30px;
-			width: 150px;
+			width: 200px;
 			text-align: center;
+			color: white;
 		}
 
 		.error {
@@ -92,3 +93,12 @@
 		.edit_table{
 			color: white;
 		}
+
+		.user_info_wrapper {
+			height: calc(100% - 65.63px);
+		}
+
+		.nav_head_clr { 
+			background-color: #ff3333;
+		 }
+
